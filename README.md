@@ -46,6 +46,12 @@ sudo apt-get install guake -y
 
 ```
 
+## Fira Code Font
+```
+sudo apt install fonts-firacode
+
+```
+
 ## Icon Theme
 
 ```
@@ -237,4 +243,32 @@ ALTER USER user_name WITH PASSWORD 'new_password';
 
 Now it's possible to setup PostgreSQL connection to DataGrip!
 
+## VSCode Extensions and Configurations
 
+- Extensions:
+   - Material Icon
+   - Material Theme
+   - Live Share
+   - Live Server
+   - ESLint
+   - GraphQL
+   - Color Highlight
+   - EditorConfig
+   - GitLens
+   - Styled Components
+   - Rocketseat React Native
+   - Rocketseat ReactJS
+ 
+- Configurations:
+
+Ctrl + Shift + B -> Settings (JSON):
+```
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Material Theme Darker",
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontSize": 18,
+    "editor.fontLigatures": true
+}
+
+```
