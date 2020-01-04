@@ -6,6 +6,11 @@ Feel free to check out my computer setup.
 
 ## Basic commands
 
+* git
+```
+sudo apt-get install git
+```
+
 * snap
 ```
 sudo apt install snapd
@@ -145,5 +150,91 @@ mkdir Sdk
 cd
 cd Downloads
 unzip sdk-tools-linux-4333796.zip -d /home/usr/Android/Sdk
+gedit ~/.bashrc
+```
+
+- Add do bash profile:
+
+```
+export ANDROID_HOME=~/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+```
+- Then run:
+```
+~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3"
+```
+
+## VirtualBox
+```
+sudo apt-get install virtualbox
+
+```
+
+## Genymotion
+
+- Download: https://www.genymotion.com/fun-zone/
+
+- Then, extract it to a folder of your preference. 
+
+```
+cd Downloads
+chmod +x genymotion-2.2.2_x64.bin
+./genymotion-2.2.2_x64.bin
+cd genymotion
+./genymotion
+
+```
+
+- Genymotion -> Settings -> ADB -> Use custom Android SDK Tools -> /home/daniela/Android/Sdk
+ 
+    - Wait for "This folder is valid" message.
+
+- Install Samsung Galaxy S8 - 7.0.0 API 24  or any other device of your preference
+
+- Double click the device 
+
+- Check the IP of your device emulator (it shows on the header of the device, you can expand it if necessary)
+
+- run:
+```
+adb connect IP_OF_YOUR_EMULATOR:5555
+
+adb devices
+
+``` 
+If if shows your device's name, then its successfully connected!
+ 
+## Datagrip
+```
+sudo snap install datagrip --classic
+
+```
+## PostgreSQL
+```
+sudo apt update
+
+sudo apt install postgresql postgresql-contrib
+
+sudo -u postgres psql
+
+\q
+
+sudo -u postgres createuser --interactive
+
+...
+
+sudo -u postgres createdb db_name_here
+
+sudo -u user_name psql db_name
+
+ALTER USER user_name WITH PASSWORD 'new_password';
+
+\q
+
+```
+
+Now it's possible to setup PostgreSQL connection to DataGrip!
 
 
