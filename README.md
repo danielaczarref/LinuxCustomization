@@ -31,6 +31,10 @@ sudo snap install gedit
 ```
 sudo apt-get install gcc-multilib lib32z1 lib32stdc++6
 ```
+* C/C++ compiler
+```
+sudo apt-get install build-essential manpages-dev
+```
 
 ## Telegram desktop
 
